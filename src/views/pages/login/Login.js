@@ -13,7 +13,7 @@ const Login = () => {
     return <FullScreenLoading />
   } else if (!isAuthenticated) {
     const root = window.location.protocol + '//' + window.location.host
-    window.location.href = root + '/.auth/login/azure'
+    window.location.href = root + '/.auth/login/aad?post_login_redirect=' + window.location.href
     return <CSpinner />
   } else {
     return <Navigate to="/home" />
