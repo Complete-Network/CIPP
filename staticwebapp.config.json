@@ -27,11 +27,11 @@
       "allowedRoles": ["admin"]
     },
     {
-      "route": "/cipp/401",
+      "route": "/401",
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
-      "route": "/cipp/404",
+      "route": "/404",
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
@@ -81,15 +81,15 @@
   },
   "responseOverrides": {
     "401": {
-      "redirect": "/cipp/401?redirect_uri=.referrer",
+      "redirect": "/401?redirect_uri=.referrer",
       "statusCode": 302,
       "exclude": ["/assets/illustrations/*.{png,jpg,gif}", "/css/*"]
     },
     "403": {
-      "rewrite": "/cipp/403"
+      "rewrite": "/403"
     },
     "404": {
-      "rewrite": "/cipp/404"
+      "rewrite": "/404"
     }
   },
   "globalHeaders": {
