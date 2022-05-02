@@ -89,7 +89,8 @@
     }
   },
   "globalHeaders": {
-    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'; img-src 'self' data: *"
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'; img-src 'self' data: *",
+    "access-control-allow-origin": "https://identity.azurestaticapps.net"
   },
   "mimeTypes": {
     ".json": "text/json"
