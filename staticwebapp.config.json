@@ -27,11 +27,11 @@
       "allowedRoles": ["admin"]
     },
     {
-      "route": "/404",
+      "route": "/cipp/404",
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
-      "route": "/401",
+      "route": "/cipp/401",
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
