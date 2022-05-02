@@ -1,19 +1,14 @@
 import React from 'react'
 import { CButton, CCol, CContainer, CRow } from '@coreui/react'
 import { Helmet } from 'react-helmet'
-import { useSearchParams } from 'react-router-dom'
-import { useState } from 'react'
 
 const Page401 = () => {
-  const [searchParams] = useSearchParams()
-  const [postLoginRedirectUri, setPostLoginRedirectUri] = useState()
+  var redirectUri = ''
 
-  const redirectUri = searchParams.get('redirect_uri')
-
-  if (redirectUri && redirectUri !== undefined) {
-    setPostLoginRedirectUri(redirectUri)
+  if (document.referrer && document.referrer !== undefined) {
+    redirectUri = document.referrer
   } else {
-    setPostLoginRedirectUri('/home')
+    redirectUri = '/home'
   }
   return (
     <div className="min-vh-100 d-flex flex-row align-items-center">
@@ -30,7 +25,7 @@ const Page401 = () => {
                 Access to this resource is denied.
                 <br /> <br />
                 {/* trigger full page reload using href */}
-                <CButton href={`/.auth/login/aad?post_login_redirect_uri=${postLoginRedirectUri}`}>
+                <CButton href={`/.auth/login/aad?post_login_redirect_uri=${redirectUri}`}>
                   Back to login
                 </CButton>
               </p>
