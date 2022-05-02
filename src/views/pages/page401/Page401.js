@@ -5,8 +5,8 @@ import { Helmet } from 'react-helmet'
 const Page401 = () => {
   var redirectUri = ''
 
-  if (document.referrer && document.referrer !== undefined) {
-    redirectUri = document.referrer
+  if (window.location.href && window.location.href !== undefined) {
+    redirectUri = window.location.href
   } else {
     redirectUri = '/home'
   }
