@@ -31,6 +31,10 @@
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
+      "route": "/401",
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+    },
+    {
       "route": "/api/RemoveStandard",
       "allowedRoles": ["admin"]
     },
