@@ -90,7 +90,8 @@
   },
   "globalHeaders": {
     "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'; img-src 'self' data: *",
-    "access-control-allow-origin": "https://identity.azurestaticapps.net"
+    "Access-Control-Allow-Origin": "https://identity.azurestaticapps.net",
+    "Access-Control-Allow-Methods": "GET, OPTIONS"
   },
   "mimeTypes": {
     ".json": "text/json"
