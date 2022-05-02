@@ -14,8 +14,9 @@ const EditGroup = React.lazy(() => import('src/views/identity/administration/Edi
 const ViewGroup = React.lazy(() => import('src/views/identity/administration/ViewGroup'))
 const Roles = React.lazy(() => import('src/views/identity/administration/Roles'))
 const Devices = React.lazy(() => import('src/views/identity/reports/Devices'))
-const Page404 = React.lazy(() => import('src/views/pages/page404/Page404'))
+const Page401 = React.lazy(() => import('src/views/pages/page401/Page401'))
 const Page403 = React.lazy(() => import('src/views/pages/page403/Page403'))
+const Page404 = React.lazy(() => import('src/views/pages/page404/Page404'))
 const MFAReport = React.lazy(() => import('src/views/identity/reports/MFAReport'))
 const Tenants = React.lazy(() => import('src/views/tenant/administration/Tenants'))
 const AlertWizard = React.lazy(() => import('src/views/tenant/administration/AlertWizard'))
@@ -151,8 +152,9 @@ const routes = [
   // { path: '/', exact: true, name: 'Home' },
   { path: '/home', name: 'Home', component: Home },
   { path: '/cipp/logs', name: 'Logs', component: Logs },
-  { path: '/cipp/404', name: 'Error', component: Page404 },
+  { path: '/cipp/401', name: 'Error', component: Page401 },
   { path: '/cipp/403', name: 'Error', component: Page403 },
+  { path: '/cipp/404', name: 'Error', component: Page404 },
   { path: '/identity', name: 'Identity' },
   { path: '/identity/administration/users/add', name: 'Add User', component: AddUser },
   { path: '/identity/administration/users/edit', name: 'Edit User', component: EditUser },
